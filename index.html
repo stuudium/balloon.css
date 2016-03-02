@@ -2,18 +2,154 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Balloon.css - CSS tooltips for HTML elements</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" sizes="16x16" href="/landing/favicon_16.png">
+    <link rel="icon" sizes="32x32" href="/landing/favicon_32.png">
+    <link rel="icon" sizes="192x192" href="/landing/favicon_192.png">
+
+    <meta name="theme-color" content="#ffd748">
+
+    <title>Balloon.css — CSS tooltips for HTML elements</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/kazzkiq/balloon.css/master/balloon.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
 <body>
-    <div class="container">
-        <div class="logo">
-            <img src="assets/img/logo.svg" alt="Balloon.css">
+    <main>
+        <div class="container">
+            <div class="logo">
+                <img src="assets/img/logo.svg" alt="Balloon.css">
+            </div>
+            <h2>Simple tooltips made of pure CSS</h2>
+            <p>Balloon.css lets you add tooltips to elements <b>without JavaScript</b> and in just a few lines of CSS.<br></p>
+            <a href="#" class="button" data-balloon="https://github.com/kazzkiq/balloon.css" data-balloon-pos="up">Github Project</a>
+            <a href="#" class="button" data-balloon="For minified version, visit Github" data-balloon-pos="up">Download CSS</a>
+
+            <div class="samples">
+                <h2>Positioning</h2>
+                <p>For positioning, use <code>data-balloon-pos</code> attribute with one of the values: <code>up</code>, <code>down</code>, <code>left</code> or <code>right</code></p>
+                <div class="sample">
+                    <pre><code class="language-markup">&lt;button data-balloon="Whats up!" data-balloon-pos="up">Hover me!&lt;/button></code></pre>
+                    <div class="example">
+                        <button data-balloon="Whats up!" data-balloon-pos="up">Hover me!</button>
+                    </div>
+                </div>
+
+                <div class="sample">
+                    <pre><code class="language-markup">&lt;button data-balloon="Whats up!" data-balloon-pos="left">Hover me!&lt;/button></code></pre>
+                    <div class="example">
+                        <button data-balloon="Whats up!" data-balloon-pos="left">Hover me!</button>
+                    </div>
+                </div>
+
+                <div class="sample">
+                    <pre><code class="language-markup">&lt;button data-balloon="Whats up!" data-balloon-pos="right">Hover me!&lt;/button></code></pre>
+                    <div class="example">
+                        <button data-balloon="Whats up!" data-balloon-pos="right">Hover me!</button>
+                    </div>
+                </div>
+
+                <div class="sample">
+                    <pre><code class="language-markup">&lt;button data-balloon="Whats up!" data-balloon-pos="down">Hover me!&lt;/button></code></pre>
+                    <div class="example">
+                        <button data-balloon="Whats up!" data-balloon-pos="down">Hover me!</button>
+                    </div>
+                </div>
+
+                <h2>Length</h2>
+                <p>Tooltips will always remain single-line no matter their length:</p>
+
+                <div class="sample">
+                    <pre><code class="language-markup">&lt;button data-balloon="Hi." data-balloon-pos="up">Hover me!&lt;/button></code></pre>
+                    <div class="example">
+                        <button data-balloon="Hi" data-balloon-pos="up">Hover me!</button>
+                    </div>
+                </div>
+
+                <div class="sample">
+                    <pre><code class="language-markup">&lt;button data-balloon="Now that's a super big text we have over here right? Lorem ipsum dolor sit I'm done." data-balloon-pos="up">Hover me!&lt;/button></code></pre>
+                    <div class="example">
+                        <button data-balloon="Now that's a super big text we have over here right? Lorem ipsum dolor sit I'm done." data-balloon-pos="up">Hover me!</button>
+                    </div>
+                </div>
+
+                <div class="sample">
+                    <pre><code class="language-markup">&lt;button data-balloon="What about something really big? This may surpass your window dimmensions. Imagine you're on that boring class with that boring teacher and you didn't slept so well last night. Suddenly you're sleeping in class. Can you believe it?!" data-balloon-pos="up">Hover me!&lt;/button></code></pre>
+                    <div class="example">
+                        <button data-balloon="What about something really big? This may surpass your window dimmensions. Imagine you're on that boring class with that boring teacher and you didn't slept so well last night. Suddenly you're sleeping in class. Can you believe it?!" data-balloon-pos="up">Hover me!</button>
+                    </div>
+                </div>
+
+                <h2>Glyphs and Icon Fonts</h2>
+                <p>You can also add any HTML special character to your tooltips, or even use third-party Icon fonts:</p>
+
+                <div class="sample">
+                    <pre><code class="language-markup">&lt;button data-balloon="HTML special characters: &amp;#9787; &amp;#9986; &amp;#9820;" data-balloon-pos="up">Hover me!&lt;/button></code></pre>
+                    <div class="example">
+                        <button data-balloon="HTML special characters: &#9787; &#9986; &#9820;" data-balloon-pos="up">Hover me!</button>
+                    </div>
+                </div>
+
+                <div class="sample">
+                    <pre><code class="language-markup">&lt;button data-balloon="Emojis: 😀 😬 😁 😂 😃 😄 😅 😆" data-balloon-pos="up">Hover me!&lt;/button></code></pre>
+                    <div class="example">
+                        <button data-balloon="Emojis: 😀 😬 😁 😂 😃 😄 😅 😆" data-balloon-pos="up">Hover me!</button>
+                    </div>
+                </div>
+
+                <div class="sample">
+                    <pre><code class="language-markup">&lt;button class="fa" data-balloon="Font Awesome: &amp;#xf030; &amp;#xf133; &amp;#xf1fc; &amp;#xf03e; &amp;#xf1f8;" data-balloon-pos="up">Hover me!&lt;/button></code></pre>
+                    <div class="example">
+                        <button class="fa" data-balloon="Font Awesome: &#xf030; &#xf133; &#xf1fc; &#xf03e; &#xf1f8;" data-balloon-pos="up">Hover me!</button>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <hr>
+
+            <h2>How to use</h2>
+            <p>Simply call <b>Balloon.css</b> to your HTML:</p>
+            <div class="sample">
+                <pre><code class="language-markup">&lt;link rel="stylesheet" href="path/to/balloon.css"></code></pre>
+            </div>
+
+            <p>And add  the attributes <code>data-balloon</code> and <code>data-balloon-pos</code> to your HTML elements:</p>
+            <div class="sample">
+                <pre><code class="language-markup">&lt;span data-balloon="I am a tooltip." data-balloon-pos="up">Blablabla&lt;/span></code></pre>
+            </div>
+
+            <hr>
+
+            <h2>Drawbacks</h2>
+            <p>Balloon.css make use of pseudo-elements thus self-closing elements such as <b>&lt;img></b>, <b>&lt;input></b>
+and <b>&lt;hr></b> will not render tooltips.</p>
+            <p>Also keep in mind that if pseudo elements are already in use on a element, the tooltip will conflict with them resulting in potential bugs.</p>
         </div>
-        <h2>Simple tooltips with only CSS.</h2>
-        <p>Balloon.css lets you add tooltips to elements in a straightfoward manner without JavaScript.<br>Thats right, just few lines of CSS needed.</p>
-        <a href="#" class="button">Github Project</a>
-        <a href="#" class="button">Download CSS</a>
-    </div>
+
+        <footer>
+            Made by Claudio Holanda (<a href="https://twitter.com/kazzkiq">@kazzkiq</a>)
+        </footer>
+
+
+    </main>
+
+    <script src="assets/js/prism.js"></script>
+    <script>
+        Prism.highlightAll();
+
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-66459426-2', 'auto');
+        ga('send', 'pageview');
+    </script>
 </body>
 </html>
