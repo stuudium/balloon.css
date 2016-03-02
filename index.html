@@ -11,7 +11,7 @@
     <link rel="icon" sizes="192x192" href="/landing/favicon_192.png">
 
     <meta property="og:url" content="http://kazzkiq.github.io/balloon.css/" />
-    <meta property="og:image" content="http://kazzkiq.github.io/balloon.css/assets/fb.jpg" />
+    <meta property="og:image" content="http://kazzkiq.github.io/balloon.css/assets/img/fb.jpg" />
     <meta property="og:title" content="Balloon.css" />
     <meta property="og:description" content="Simple tooltips made of pure CSS!" />
 
@@ -65,26 +65,40 @@
                 </div>
 
                 <h2>Length</h2>
-                <p>Tooltips will always remain single-line no matter their length:</p>
+                <p>By default, tooltips will always remain single-line no matter their length. You can change this behavior by using the attribute <code>data-balloon-length</code> with one of the values: <code>small</code>, <code>medium</code>, <code>large</code> or <code>fit</code>.</p>
 
                 <div class="sample">
-                    <pre><code class="language-markup">&lt;button data-balloon="Hi." data-balloon-pos="up">Hover me!&lt;/button></code></pre>
+                    <pre><code class="language-markup">&lt;button data-balloon-length="small" data-balloon="Hi." data-balloon-pos="up">Hover me!&lt;/button></code></pre>
                     <div class="example">
-                        <button data-balloon="Hi" data-balloon-pos="up">Hover me!</button>
+                        <button data-balloon="Hi" data-balloon-pos="up" data-balloon-length="small">I'm a small tooltip</button>
                     </div>
                 </div>
 
                 <div class="sample">
-                    <pre><code class="language-markup">&lt;button data-balloon="Now that's a super big text we have over here right? Lorem ipsum dolor sit I'm done." data-balloon-pos="up">Hover me!&lt;/button></code></pre>
+                    <pre><code class="language-markup">&lt;button data-balloon-length="medium" data-balloon="Now that's a super big text we have over here right? Lorem ipsum dolor sit I'm done." data-balloon-pos="up">I'm a medium tooltip.&lt;/button></code></pre>
                     <div class="example">
-                        <button data-balloon="Now that's a super big text we have over here right? Lorem ipsum dolor sit I'm done." data-balloon-pos="up">Hover me!</button>
+                        <button data-balloon="Now that's a super big text we have over here right? Lorem ipsum dolor sit I'm done." data-balloon-pos="up" data-balloon-length="medium">I'm a medium tooltip.</button>
                     </div>
                 </div>
 
                 <div class="sample">
-                    <pre><code class="language-markup">&lt;button data-balloon="What about something really big? This may surpass your window dimensions. Imagine you're on that boring class with that boring teacher and you didn't slept so well last night. Suddenly you're sleeping in class. Can you believe it?!" data-balloon-pos="up">Hover me!&lt;/button></code></pre>
+                    <pre><code class="language-markup">&lt;button data-balloon-length="large" data-balloon="What about something really big? This may surpass your window dimensions. Imagine you're on that boring class with that boring teacher and you didn't slept so well last night. Suddenly you're sleeping in class. Can you believe it?!" data-balloon-pos="up">I'm a large tooltip&lt;/button></code></pre>
                     <div class="example">
-                        <button data-balloon="What about something really big? This may surpass your window dimensions. Imagine you're on that boring class with that boring teacher and you didn't slept so well last night. Suddenly you're sleeping in class. Can you believe it?!" data-balloon-pos="up">Hover me!</button>
+                        <button data-balloon="What about something really big? This may surpass your window dimensions. Imagine you're on that boring class with that boring teacher and you didn't slept so well last night. Suddenly you're sleeping in class. Can you believe it?!" data-balloon-pos="up" data-balloon-length="large">I'm a large tooltip</button>
+                    </div>
+                </div>
+
+                <div class="sample">
+                    <pre><code class="language-markup">&lt;button data-balloon-length="xlarge" data-balloon="What about something really big? This may surpass your window dimensions. Imagine you're on that boring class with that boring teacher and you didn't slept so well last night. Suddenly you're sleeping in class. Can you believe it?!" data-balloon-pos="up">I'm a Xlarge tooltip&lt;/button></code></pre>
+                    <div class="example">
+                        <button data-balloon="What about something really big? This may surpass your window dimensions. Imagine you're on that boring class with that boring teacher and you didn't slept so well last night. Suddenly you're sleeping in class. Can you believe it?!" data-balloon-pos="up" data-balloon-length="xlarge">I'm a Xlarge tooltip</button>
+                    </div>
+                </div>
+
+                <div class="sample">
+                    <pre><code class="language-markup">&lt;button data-balloon-length="fit" data-balloon="What about something really big? This may surpass your window dimensions. Imagine you're on that boring class with that boring teacher and you didn't slept so well last night. Suddenly you're sleeping in class. Can you believe it?!" data-balloon-pos="up">My width fill fit to element&lt;/button></code></pre>
+                    <div class="example">
+                        <button data-balloon-length="fit" data-balloon="What about something really big? This may surpass your window dimensions. Imagine you're on that boring class with that boring teacher and you didn't slept so well last night. Suddenly you're sleeping in class. Can you believe it?!" data-balloon-pos="up">My width fill fit to element</button>
                     </div>
                 </div>
 
@@ -126,7 +140,7 @@
 
             <p>And add  the attributes <code>data-balloon</code> and <code>data-balloon-pos</code> to your HTML elements:</p>
             <div class="sample">
-                <pre><code class="language-markup">&lt;span data-balloon="I am a tooltip." data-balloon-pos="up">Blablabla&lt;/span></code></pre>
+                <pre><code class="language-markup">&lt;span data-balloon="I'm a tooltip." data-balloon-pos="up">Blablabla&lt;/span></code></pre>
             </div>
 
             <hr>
