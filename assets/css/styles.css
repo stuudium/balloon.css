@@ -168,6 +168,10 @@ code {
     color: #FF3D2E;
 }
 
+.github-button {
+    display: none;
+}
+
 /* Github button */
 iframe {
     position: absolute;
