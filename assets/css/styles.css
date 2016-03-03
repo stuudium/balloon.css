@@ -168,6 +168,13 @@ code {
     color: #FF3D2E;
 }
 
+/* Github button */
+iframe {
+    position: absolute;
+    margin-top: -3.2rem;
+    margin-left: 29rem;
+}
+
 @media screen and (max-width: 1080px) {
     .container {
         margin: 0 2rem;
@@ -175,6 +182,12 @@ code {
 }
 
 @media screen and (max-width: 768px) {
+    iframe {
+        position: relative;
+        margin-top: 3rem;
+        margin-left: 0;
+        margin-bottom: 0;
+    }
     .container {
         margin:0 2rem;
     }
